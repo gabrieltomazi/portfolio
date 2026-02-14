@@ -12,18 +12,16 @@ ScrollSmoother.create({
 
 document.querySelectorAll('.menu-link').forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Impede o salto padrão do HTML
-        console.log(e)
-        const target = e.target.getAttribute('href'); // Pega o ID (ex: #sobre)
+        e.preventDefault(); 
+        const target = e.target.getAttribute('href');
 
         gsap.to(window, {
-            duration: 1,      // Tempo da animação em segundos
-            scrollTo: target,   // O destino
-            ease: "power2.inOut" // Estilo da suavização
+            duration: 1,
+            scrollTo: target,
+            ease: "power2.inOut"
         });
     });
 });
-
 
 function enviarMsg(event) {
 
