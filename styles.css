@@ -24,7 +24,7 @@ main {
     height: 100vh;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--claro);
 }
@@ -166,7 +166,7 @@ h1 {
     }
 }
 
-.contatos{
+.contatos {
     padding-bottom: 10rem;
 }
 
@@ -246,22 +246,94 @@ h1 {
     }
 }
 
-@media (max-width: 1200px) {
-    h1{
-        text-align: center;
+@media (min-width: 768px) and (max-width: 1200px) {
+    .menu {
+        font-size: 2rem;
     }
-
-
+    .sobre {
+        min-height: min-content;
+        .sobre-titulo {
+            font-size: 4rem;
+        }
+        .sobre-caixa {
+            .sobre-paragrafo {
+                font-size: 1.8rem;
+                height: 100%;
+                text-align: start;
+            }
+        }
+    }
     .projetos {
-        margin-bottom: -50px;
+        height: min-content;
+        .projetos-titulo {
+            font-size: 4rem;
+        }
         .projetos-caixa {
             display: flex;
             flex-direction: column;
             max-width: 60vh;
         }
     }
+    .contatos {
+        .contatos-titulo {
+            font-size: 4rem;
+        }
+    }
+}
 
-    .contatos{
-        margin-top: 40rem;
+@media (max-width: 767px) {
+    section {
+        height: min-content;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .menu {
+        gap: 1rem;
+    }
+    .cabecalho {
+        margin-top: 1rem;
+        .foto-perfil {
+            width: 150px;
+        }
+        .cabecalho-subtitulo {
+            font-size: 1rem;
+        }
+    }
+    .sobre {
+        min-height: min-content;
+        .sobre-titulo {
+            font-size: 2rem;
+        }
+        .sobre-caixa {
+            .sobre-paragrafo {
+                font-size: 14px;
+                height: 100%;
+                text-align: start;
+            }
+        }
+    }
+    .projetos {
+        height: min-content;
+        .projetos-caixa {
+            display: flex;
+            flex-direction: column;
+            max-width: 60vh;
+        }
+    }
+    .contatos {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .contatos-titulo {
+            font-size: 36px;
+            padding: 2px 1px;
+        }
+        .formulario-contato {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 }
