@@ -43,6 +43,7 @@ a {
     list-style: none;
     gap: 3rem;
     justify-content: center;
+    font-size: 1.3rem;
 }
 
 .menu-link {
@@ -74,6 +75,28 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .icons {
+        margin: 2rem 0;
+        display: flex;
+        gap: 2rem;
+        .icon {
+            width: 4rem;
+            transition: all .3s ease;
+        }
+    }
+    .icons .icon:hover {
+        transform: translateY(-10px);
+    }
+    /* Sombras individuais */
+    .icons #github:hover {
+        filter: drop-shadow(0 0 1rem #ffffff);
+    }
+    .icons #linkedin:hover {
+        filter: drop-shadow(0 0 1rem #0077b5);
+    }
+    .icons #instagram:hover {
+        filter: drop-shadow(0 0 1rem #E1306C);
+    }
 }
 
 .foto-perfil {
@@ -128,11 +151,6 @@ h1 {
         font-size: 2.5rem;
         margin-bottom: 50px;
     }
-    .projetos-card:hover {
-        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-        transform: translateY(-10px);
-        scale: 1.03;
-    }
     .projetos-caixa {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -146,7 +164,7 @@ h1 {
             border: 1px solid var(--vidro);
             overflow: hidden;
             cursor: pointer;
-            transition: all .3s ease;
+            transition: scale .3s ease;
             .caixa-textos-projeto {
                 padding: 1.25rem;
                 .info-projetos {
@@ -248,7 +266,7 @@ h1 {
 
 @media (min-width: 768px) and (max-width: 1200px) {
     .menu {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
     .sobre {
         min-height: min-content;
@@ -291,16 +309,22 @@ h1 {
     }
     .menu {
         gap: 1rem;
+        font-size: 1.2rem;
     }
     .cabecalho {
         margin-top: 1rem;
         .foto-perfil {
             width: 150px;
         }
+        
         .cabecalho-subtitulo {
             font-size: 1rem;
         }
     }
+
+    .cabecalho .icons .icon {
+        width: 3rem;
+    } 
     .sobre {
         min-height: min-content;
         .sobre-titulo {
