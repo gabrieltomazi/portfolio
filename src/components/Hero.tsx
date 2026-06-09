@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <main
       id="inicio"
-      className="cabecalho flex min-h-screen flex-col justify-center items-center"
+      className="cabecalho flex min-h-screen flex-col justify-center items-center pt-24"
     >
       <Image
         src="/foto-perfil.webp"
@@ -17,10 +17,10 @@ export default function Hero() {
         height={250}
         priority
       />
-      <h1 className="text-(--primary) text-center text-[2rem] font-bold m-5">
+      <h1 className="text-(--primary) text-center text-[2rem] md:text-[3.5rem] font-bold m-5">
         Gabriel Tomazi
       </h1>
-      <p className="cabecalho-subtitulo text-[1rem] text-(--light)">
+      <p className="cabecalho-subtitulo text-[1rem] md:text-[1.5rem] text-(--light)">
         Desenvolvedor Front-End
       </p>
       <div className="icons my-8 mx-0 flex gap-8 ">
@@ -30,7 +30,7 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <Image
-            className="icon w-12 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#fff] "
+            className="icon w-12 md:w-16 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#fff] "
             id="github"
             src="/github.png"
             alt="github icon"
@@ -44,7 +44,7 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <Image
-            className="icon w-12 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#0077b5]"
+            className="icon w-12 md:w-16 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#0077b5]"
             id="linkedin"
             src="/linkedin.png"
             alt="linkedin icon"
@@ -58,7 +58,7 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <Image
-            className="icon w-12 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#E1306C]"
+            className="icon w-12 md:w-16 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#E1306C]"
             id="instagram"
             src="/instagram.png"
             alt="instagram icon"
