@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
@@ -55,14 +56,14 @@ export default function Contact() {
         <div className="space-y-4">
           {contactItems.map((item) => (
             <div key={item.id} className="flex gap-4">
-              <a href={item.link} className="flex justify-center items-center w-12 bg-[#251B3D] rounded-full">
+              <Link target="_blank" href={item.link} className="flex justify-center items-center w-12 bg-[#251B3D] rounded-full">
                 <div >
                   {item.icon}
                 </div>
-              </a>
+              </Link>
               <div>
                 <p className="text-[#6D4EB3]">{item.title}</p>
-                <a href={item.link}>{item.value}</a>
+                <Link target="_blank" href={item.link}>{item.value}</Link>
               </div>
 
             </div>
