@@ -10,8 +10,17 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Tomazi | Portfólio",
-  description: "Desenvolvedor Front-End",
+  title: "Gabriel Tomazi | Dev Front-End & Engenharia de Software",
+  description: "Portfólio profissional de Gabriel Tomazi, Desenvolvedor Front-End especializado em React, Next.js e Node.js. Confira meus projetos e especializações.",
+  keywords: ["Gabriel Tomazi", "Gabriel Tomazi desenvolvedor", "Front-End Criciúma", "Software Engineer portfolio"],
+  authors: [{ name: "Gabriel Tomazi" }],
+  openGraph: {
+    title: "Gabriel Tomazi | Portfólio",
+    description: "Desenvolvedor Front-End & Estudante de Engenharia de Software.",
+    url: "https://gabrieltomazi.vercel.app/",
+    siteName: "Gabriel Tomazi Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
