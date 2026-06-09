@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Projects() {
   const projects = [
@@ -33,19 +34,20 @@ export default function Projects() {
       <h2 className="projetos-titulo text-center text-[2.5rem] mb-12.5">
         Meus Projetos
       </h2>
-      <div className="projetos-caixa grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 max-w-300 my-0 mx-auto">
+      <div className="projetos-caixa grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 md:grid-cols-3 max-w-300 justify-items-center mx-auto">
         {projects.map((project) => (
           <div
             key={project.name}
-            className="projetos-card max-w-100 bg-[rgba(255,255,255, 0.05)] rounded-2xl backdrop-blur[5px] border border-solid border-(--glass) overflow-hidden cursor-pointer transition-[scale] duration-300 ease-in-out hover:scale-110"
+            className="projetos-card w-full max-w-100 mx-auto bg-[rgba(255,255,255, 0.05)] rounded-2xl backdrop-blur[5px] border border-solid border-(--glass) overflow-hidden cursor-pointer transition-[scale] duration-300 ease-in-out hover:scale-110"
           >
-            <a href={project.link}>
+            <Link href={project.link}>
               <Image
                 src={project.image}
                 alt={project.name}
-                className="projetos-imagem h-50 w-full h-auto object-cover"
-                width={200}
-                height={200}
+                className="projetos-imagem w-full h-50 object-cover"
+                width={600}
+                height={400}
+                quality={90}
               />
               <div className="caixa-textos-projeto p-5">
                 <h3 className="info-projetos font-bold mb-1.25">
@@ -55,10 +57,11 @@ export default function Projects() {
                   {project.description}
                 </p>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
+
     </section>
   );
 }
