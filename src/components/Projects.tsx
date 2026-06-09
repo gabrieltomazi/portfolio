@@ -4,6 +4,7 @@ import Link from "next/link";
 export default function Projects() {
   const projects = [
     {
+      id: 1,
       name: "TechStore",
       link: "https://gabrieltomazi.github.io/TechStore/",
       image: "/projeto1.png",
@@ -11,6 +12,7 @@ export default function Projects() {
         "Este projeto é um carrossel de produtos para simular a vitrine digital de uma loja de tecnologia.",
     },
     {
+      id: 2,
       name: "Stranger Things: The Experience",
       link: "https://gabrieltomazi.github.io/strangerthings-lp/",
       image: "/projeto2.png",
@@ -18,6 +20,7 @@ export default function Projects() {
         "Um projeto interativo de interface web inspirado na série Stranger Things da Netflix.",
     },
     {
+      id: 3,
       name: "Weather API",
       link: "https://gabrieltomazi.github.io/weather-api/",
       image: "/projeto3.png",
@@ -37,7 +40,7 @@ export default function Projects() {
       <div className="projetos-caixa grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 md:grid-cols-3 max-w-300 justify-items-center mx-auto">
         {projects.map((project) => (
           <div
-            key={project.name}
+            key={project.id}
             className="projetos-card w-full max-w-100 mx-auto bg-[rgba(255,255,255, 0.05)] rounded-2xl backdrop-blur[5px] border border-solid border-(--glass) overflow-hidden cursor-pointer transition-[scale] duration-300 ease-in-out hover:scale-110"
           >
             <Link href={project.link}>
@@ -61,7 +64,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-
     </section>
   );
 }
