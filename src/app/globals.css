@@ -31,12 +31,7 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--dark);
   color: var(--light);
-  overflow-x: hidden;
 }

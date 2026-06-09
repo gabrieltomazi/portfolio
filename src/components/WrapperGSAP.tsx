@@ -5,9 +5,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { type ReactNode, useRef } from "react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+  gsap.registerPlugin(ScrollSmoother, ScrollTrigger, ScrollToPlugin);
 }
 
 export default function WrapperGSAP({ children }: { children: ReactNode }) {
