@@ -1,20 +1,24 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Particles from "@/components/Particles";
-import Projects from "@/components/Projects";
+
+import {
+  About,
+  Contact,
+  Header,
+  Hero,
+  Particles,
+  Projects,
+  WrapperGSAP,
+} from "@/components";
+
 
 export default function Home() {
   return (
-    <div>
-      <Header/>
+    <WrapperGSAP>
+      <Header />
       <Hero />
       <About />
       <Projects />
       <Contact />
       <Particles />
-      
-    </div>
+    </WrapperGSAP>
   );
 }

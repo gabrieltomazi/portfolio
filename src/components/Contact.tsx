@@ -1,4 +1,19 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Contact() {
+  const [message, setMessage] = useState("");
+
+  const telefone = "5548999256706";
+
+  function sendMsg(e: React.SubmitEvent) {
+    e.preventDefault();
+    const formatedMsg = encodeURIComponent(message);
+    const url = `https://wa.me/${telefone}?text=${formatedMsg}`;
+    window.open(url, "_blank");
+  }
+
   return (
     <section id="contatos" className="contatos pb-40">
       <h2 className="contatos-titulo text-center text-[2.5rem] mb-12.5">
@@ -8,7 +23,7 @@ export default function Contact() {
       <form
         className="formulario-contato max-w-150 mx-auto bg-[rgba(255,255,255, 0.05)] backdrop-blur-[10px] p-8 border border-solid border-(--glass) rounded-2xl"
         id="formulario"
-        onSubmit="enviarMsg(event)"
+        onSubmit={sendMsg}
       >
         <div className="grupo-form">
           <input
@@ -23,16 +38,17 @@ export default function Contact() {
           <textarea
             className="campo-form w-full p-4 bg-[rgba(255,255,255, 0.05)] rounded-lg text-(--light) border border-solid border-(--glass) outline-none transition-colors duration-1000 ease-in-out focus:border-(--secondary) focus:shadow-[0_0_10px_rgba(79,70,229,0.3)] resize-y"
             rows={5}
-            id="mensagem"
+            id="message"
+            name="message"
+            value={message}
             placeholder="Digite sua Mensagem"
-          ></textarea>
+            onChange={(e) => setMessage(e.currentTarget.value)}
+          />
         </div>
 
         <button
           type="submit"
-          className="botao-form text-(--light) bg-linear-to-tr from-(--primary) to-(--secondary) py-4 px-8 border-none rounded-lg cursor-pointer font-bold 
-          w-full transition-all duration-500 
-          ease-in-out hover:-translate-y-1 hover:shadow-[0_5px_5px_rgba(79,70,229, .4)]"
+          className="botao-form text-(--light) bg-linear-to-tr from-(--primary) to-(--secondary) w-full py-4 px-8 border-none rounded-lg cursor-pointer font-bold transition-all duration-500 ease-in-out hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(79,70,229,.4)]"
         >
           Enviar WhatsApp
         </button>

@@ -37,13 +37,13 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className="projetos-card bg-[rgba(255,255,255, 0.05)] rounded-2xl backdrop-blur[5px] border border-solid border-(--glass) overflow-hidden cursor-pointer transition-[scale] duration-300 ease-in-out hover:scale-110"
+            className="projetos-card max-w-100 bg-[rgba(255,255,255, 0.05)] rounded-2xl backdrop-blur[5px] border border-solid border-(--glass) overflow-hidden cursor-pointer transition-[scale] duration-300 ease-in-out hover:scale-110"
           >
             <a href={project.link}>
               <Image
                 src={project.image}
                 alt={project.name}
-                className="projetos-imagem h-50 w-full"
+                className="projetos-imagem h-50 w-full h-auto object-cover"
                 width={200}
                 height={200}
               />

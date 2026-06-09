@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FaArrowDown } from "react-icons/fa";
+import { LuMouse } from "react-icons/lu";
 
 export default function Hero() {
   return (
@@ -8,16 +10,17 @@ export default function Hero() {
     >
       <Image
         src="/foto-perfil.webp"
-        className="foto-perfil w-62.5 h-62.5 shadow-[0_0_20px_--primary] rounded-full border-4 border-(--glass) animate-[float_5s_ease-in-out_infinite]"
+        className="foto-perfil w-37.5 md:w-62.5 shadow-[0_0_20px_--primary] 
+        rounded-full border-4 h-auto object-cover border-(--glass) animate-[float_5s_ease-in-out_infinite]"
         alt="foto-perfil"
         width={250}
         height={250}
         priority
       />
-      <h1 className="text-4xl text-(--primary) font-bold m-5">
+      <h1 className="text-(--primary) text-center text-[2rem] font-bold m-5">
         Gabriel Tomazi
       </h1>
-      <p className="cabecalho-subtitulo text-xl text-(--light)">
+      <p className="cabecalho-subtitulo text-[1rem] text-(--light)">
         Desenvolvedor Front-End
       </p>
       <div className="icons my-8 mx-0 flex gap-8 ">
@@ -27,7 +30,7 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <Image
-            className="icon w-16 transition-all duration-300 ease-in-out hover:-translate-y-2.5 "
+            className="icon w-12 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#fff] "
             id="github"
             src="/github.png"
             alt="github icon"
@@ -41,7 +44,7 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <Image
-            className="icon w-16 transition-all duration-300 ease-in-out hover:-translate-y-2.5 "
+            className="icon w-12 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#0077b5]"
             id="linkedin"
             src="/linkedin.png"
             alt="linkedin icon"
@@ -55,7 +58,7 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <Image
-            className="icon w-16 transition-all duration-300 ease-in-out hover:-translate-y-2.5"
+            className="icon w-12 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#E1306C]"
             id="instagram"
             src="/instagram.png"
             alt="instagram icon"
@@ -63,6 +66,10 @@ export default function Hero() {
             height={250}
           />
         </a>
+      </div>
+      <div className="flex flex-col items-center  gap-2 animate-[float_2s_ease-in-out_infinite]">
+        <LuMouse className="mt-10" size="2rem" />
+        <FaArrowDown />
       </div>
     </main>
   );

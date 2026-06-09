@@ -8,7 +8,7 @@ export default function About() {
         <p className="sobre-paragrafo text-center text-[1.2rem]">
           Olá! Sou o Gabriel Tomazi, <b>Desenvolvedor Front-End</b> apaixonado
           por transformar linhas de código em interfaces intuitivas e
-          eficientes. Atualmente, curso Engenharia de Software na SATC e
+          eficientes. Atualmente curso Engenharia de Software na SATC e
           aprofundo minhas competências técnicas no DevClub, focando sempre em
           entregar soluções que unam performance e design.
         </p>

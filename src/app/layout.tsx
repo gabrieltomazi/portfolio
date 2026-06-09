@@ -5,7 +5,8 @@ import "./globals.css";
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "500", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,8 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${poppins.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="pt-BR" className="h-full">
+      <body
+        className={`${poppins.className} ${poppins.variable} antialiased min-h-full flex flex-col`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
