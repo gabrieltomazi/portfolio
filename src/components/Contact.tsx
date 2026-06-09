@@ -1,18 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Contact() {
-  const [message, setMessage] = useState("");
+  const message = "Olá Gabriel! Vi seu portfólio e gostaria de conversar!"
 
   const telefone = "5548999256706";
 
-  function sendMsg(e: React.SubmitEvent) {
-    e.preventDefault();
-    const formatedMsg = encodeURIComponent(message);
-    const url = `https://wa.me/${telefone}?text=${formatedMsg}`;
-    window.open(url, "_blank");
-  }
+  const contactItems = [
+    {
+      id: 1,
+      title: "Email",
+      value: "gtomazi193@gmail.com",
+      link: "mailto:gtomazi193@gmail.com",
+      icon: <MdOutlineEmail size={24} fill="#6D4EB3" />,
+    },
+    {
+      id: 2,
+      title: "WhatsApp",
+      value: "(48) 99925-6706",
+      link: `https://wa.me/${telefone}?text=${encodeURIComponent(message)}`,
+      icon: <FaWhatsapp size={24} fill="#6D4EB3" />,
+    },
+    {
+      id: 3,
+      title: "GitHub",
+      value: "github.com/gabrieltomazi",
+      link: "https://github.com/gabrieltomazi",
+      icon: <FaGithub size={24} fill="#6D4EB3" />,
+    },
+    {
+      id: 4,
+      title: "LinkedIn",
+      value: "linkedin.com/in/gabriel-tomazi",
+      link: "https://linkedin.com/in/gabriel-tomazi",
+      icon: <FaLinkedin size={24} fill="#6D4EB3" />,
+    },
+  ];
 
   return (
     <section id="contatos" className="contatos pb-40">
@@ -23,9 +48,35 @@ export default function Contact() {
       <form
         className="formulario-contato max-w-150 mx-auto bg-[rgba(255,255,255, 0.05)] backdrop-blur-[10px] p-8 border border-solid border-(--glass) rounded-2xl"
         id="formulario"
-        onSubmit={sendMsg}
       >
-        <div className="grupo-form">
+
+        <h2 className="text-2xl font-bold mb-6">Informações de Contato</h2>
+
+        <div className="space-y-4">
+          {contactItems.map((item) => (
+            <div key={item.id} className="flex gap-4">
+              <a href={item.link} className="flex justify-center items-center w-12 bg-[#251B3D] rounded-full">
+                <div >
+                  {item.icon}
+                </div>
+              </a>
+              <div>
+                <p className="text-[#6D4EB3]">{item.title}</p>
+                <a href={item.link}>{item.value}</a>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+
+
+
+
+
+
+        {/* <div className="grupo-form">
           <input
             type="name"
             placeholder="Nome"
@@ -40,9 +91,7 @@ export default function Contact() {
             rows={5}
             id="message"
             name="message"
-            value={message}
             placeholder="Digite sua Mensagem"
-            onChange={(e) => setMessage(e.currentTarget.value)}
           />
         </div>
 
@@ -51,7 +100,7 @@ export default function Contact() {
           className="botao-form text-(--light) bg-linear-to-tr from-(--primary) to-(--secondary) w-full py-4 px-8 border-none rounded-lg cursor-pointer font-bold transition-all duration-500 ease-in-out hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(79,70,229,.4)]"
         >
           Enviar WhatsApp
-        </button>
+        </button> */}
       </form>
     </section>
   );
