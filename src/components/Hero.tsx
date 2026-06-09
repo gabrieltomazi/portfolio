@@ -36,6 +36,7 @@ export default function Hero() {
             alt="github icon"
             width={250}
             height={250}
+            priority
           />
         </a>
         <a
@@ -50,6 +51,7 @@ export default function Hero() {
             alt="linkedin icon"
             width={250}
             height={250}
+            priority
           />
         </a>
         <a
@@ -64,6 +66,7 @@ export default function Hero() {
             alt="instagram icon"
             width={250}
             height={250}
+            priority
           />
         </a>
       </div>
