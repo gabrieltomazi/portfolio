@@ -41,7 +41,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contatos" className="contatos pb-40 px-8">
+    <section id="contatos" className="contatos py-24 px-8">
       <h2 className="contatos-titulo text-center text-[2.5rem] mb-12.5">
         Entre em Contato
       </h2>

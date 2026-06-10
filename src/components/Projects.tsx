@@ -57,12 +57,12 @@ export default function Projects() {
     <section
       id="projetos"
       ref={containerRef}
-      className="projetos h-full py-24 px-4 overflow-hidden"
+      className="projetos h-full py-24 px-8 overflow-hidden"
     >
       <h2 className="projetos-titulo text-center text-[2.5rem] mb-12.5">
         Meus Projetos
       </h2>
-      <div className="projetos-caixa grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 md:grid-cols-3 max-w-300 justify-items-center mx-auto">
+      <div className="projetos-caixa grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 lg:grid-cols-3 max-w-300 justify-items-center mx-auto">
         {projects.map((project) => (
           <div
             key={project.id}
