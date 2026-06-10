@@ -71,32 +71,6 @@ export default function Contact() {
             </div>
           ))}
         </div>
-
-        {/* <div className="grupo-form">
-          <input
-            type="name"
-            placeholder="Nome"
-            id="nome"
-            className="campo-form w-full p-4 mb-4 bg-[rgba(255,255,255, 0.05)] rounded-lg text-(--light) border border-solid border-(--glass) outline-none transition-all duration-300 ease-in-out focus:border-(--secondary) focus:shadow-[0_0_10px_rgba(79,70,229,0.3)]"
-          />
-        </div>
-
-        <div className="grupo-form mb-6">
-          <textarea
-            className="campo-form w-full p-4 bg-[rgba(255,255,255, 0.05)] rounded-lg text-(--light) border border-solid border-(--glass) outline-none transition-colors duration-1000 ease-in-out focus:border-(--secondary) focus:shadow-[0_0_10px_rgba(79,70,229,0.3)] resize-y"
-            rows={5}
-            id="message"
-            name="message"
-            placeholder="Digite sua Mensagem"
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="botao-form text-(--light) bg-linear-to-tr from-(--primary) to-(--secondary) w-full py-4 px-8 border-none rounded-lg cursor-pointer font-bold transition-all duration-500 ease-in-out hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(79,70,229,.4)]"
-        >
-          Enviar WhatsApp
-        </button> */}
       </form>
     </section>
   );
