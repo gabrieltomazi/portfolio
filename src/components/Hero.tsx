@@ -32,6 +32,7 @@ export default function Hero() {
           href="https://github.com/gabrieltomazi"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Acessar perfil do GitHub"
         >
           <Image
             className="icon w-12 md:w-16 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#fff] "
@@ -47,6 +48,7 @@ export default function Hero() {
           href="https://www.linkedin.com/in/gabriel-tomazi/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Acessar perfil do LinkedIn"
         >
           <Image
             className="icon w-12 md:w-16 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#0077b5]"
@@ -62,6 +64,7 @@ export default function Hero() {
           href="https://www.instagram.com/gabrieltomazi_/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Acessar perfil do Instagram"
         >
           <Image
             className="icon w-12 md:w-16 transition-all duration-300 ease-in-out h-auto object-cover hover:-translate-y-2.5 hover:drop-shadow-[0_0_1rem_#E1306C]"
@@ -75,6 +78,7 @@ export default function Hero() {
         </Link>
       </div>
       <Link
+        aria-label="Rolar para seção sobre"
         href="#sobre"
         onClick={(e) => handleScroll(e, "#sobre")}
         className="flex flex-col items-center gap-2 animate-[float_2s_ease-in-out_infinite]">

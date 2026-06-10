@@ -68,7 +68,11 @@ export default function Projects() {
             key={project.id}
             className="projetos-card w-full max-w-100 mx-auto bg-[rgba(255,255,255, 0.05)] rounded-2xl backdrop-blur[5px] border border-solid border-(--glass) overflow-hidden cursor-pointer transition-[scale] duration-300 ease-in-out hover:scale-110"
           >
-            <Link target="_blank" href={project.link}>
+            <Link 
+              target="_blank" 
+              href={project.link}
+              aria-label={`Visualizar projeto ${project.name} (abre em nova aba)`}
+            >
               <Image
                 src={project.image}
                 alt={project.name}

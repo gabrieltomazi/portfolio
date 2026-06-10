@@ -16,6 +16,7 @@ export default function Contact() {
       value: "gtomazi193@gmail.com",
       link: "mailto:gtomazi193@gmail.com",
       icon: <MdOutlineEmail size={24} fill="#6D4EB3" />,
+      ariaLabel: "Enviar e-mail para Gabriel Tomazi",
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ export default function Contact() {
       value: "(48) 99925-6706",
       link: `https://wa.me/${telefone}?text=${encodeURIComponent(message)}`,
       icon: <FaWhatsapp size={24} fill="#6D4EB3" />,
+      ariaLabel: "Iniciar conversa no WhatsApp com Gabriel Tomazi",
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ export default function Contact() {
       value: "github.com/gabrieltomazi",
       link: "https://github.com/gabrieltomazi",
       icon: <FaGithub size={24} fill="#6D4EB3" />,
+      ariaLabel: "Acessar perfil do GitHub de Gabriel Tomazi",
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ export default function Contact() {
       value: "linkedin.com/in/gabriel-tomazi",
       link: "https://linkedin.com/in/gabriel-tomazi",
       icon: <FaLinkedin size={24} fill="#6D4EB3" />,
+      ariaLabel: "Acessar perfil do LinkedIn de Gabriel Tomazi",
     },
   ];
 
@@ -59,12 +63,17 @@ export default function Contact() {
                 target="_blank"
                 href={item.link}
                 className="flex justify-center items-center w-12 h-12 bg-[#251B3D] rounded-full"
+                aria-label={item.ariaLabel}
               >
                 <div>{item.icon}</div>
               </Link>
               <div>
                 <p className="text-[#6D4EB3]">{item.title}</p>
-                <Link target="_blank" href={item.link}>
+                <Link 
+                  target="_blank" 
+                  href={item.link}
+                  aria-label={`${item.title}: ${item.value}`}
+                >
                   <p className="text-xs md:text-base">{item.value}</p>
                 </Link>
               </div>
