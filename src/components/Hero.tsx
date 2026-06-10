@@ -1,6 +1,10 @@
+"use client"
+
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa";
 import { LuMouse } from "react-icons/lu";
+import { handleScroll } from "@/utils/scroll";
 
 export default function Hero() {
   return (
@@ -24,7 +28,7 @@ export default function Hero() {
         Desenvolvedor Front-End
       </p>
       <div className="icons my-8 mx-0 flex gap-8 ">
-        <a
+        <Link
           href="https://github.com/gabrieltomazi"
           target="_blank"
           rel="noopener noreferrer"
@@ -38,8 +42,8 @@ export default function Hero() {
             height={250}
             priority
           />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://www.linkedin.com/in/gabriel-tomazi/"
           target="_blank"
           rel="noopener noreferrer"
@@ -53,8 +57,8 @@ export default function Hero() {
             height={250}
             priority
           />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://www.instagram.com/gabrieltomazi_/"
           target="_blank"
           rel="noopener noreferrer"
@@ -68,12 +72,18 @@ export default function Hero() {
             height={250}
             priority
           />
-        </a>
+        </Link>
       </div>
-      <div className="flex flex-col items-center  gap-2 animate-[float_2s_ease-in-out_infinite]">
-        <LuMouse className="mt-10" size="2rem" />
+      <Link
+        href="#sobre"
+        onClick={(e) => handleScroll(e, "#sobre")}
+        className="flex flex-col items-center gap-2 animate-[float_2s_ease-in-out_infinite]">
+        <LuMouse
+          className="mt-10"
+          size="2rem"
+        />
         <FaArrowDown />
-      </div>
+      </Link>
     </main>
   );
 }

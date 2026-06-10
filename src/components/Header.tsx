@@ -1,22 +1,11 @@
 "use client"
 
-import { gsap } from 'gsap'
 import Link from 'next/link';
+import { handleScroll } from '@/utils/scroll';
 
 export default function Header() {
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault(); 
 
-    gsap.to(window, {
-      duration: 1.2,      
-      scrollTo: {
-        y: targetId,      
-        autoKill: true,   
-      },
-      ease: "power3.inOut", 
-    });
-  };
 
   return (
     <nav className="navegacao fixed top-0 bg-[rgba(15,23,42, .5)] w-full z-100 p-6">
