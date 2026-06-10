@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function Contact() {
-  const message = "Olá Gabriel! Vi seu portfólio e gostaria de conversar!"
+  const message = "Olá Gabriel! Vi seu portfólio e gostaria de conversar!";
 
   const telefone = "5548999256706";
 
@@ -41,7 +41,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contatos" className="contatos pb-40">
+    <section id="contatos" className="contatos pb-40 px-8">
       <h2 className="contatos-titulo text-center text-[2.5rem] mb-12.5">
         Entre em Contato
       </h2>
@@ -50,32 +50,27 @@ export default function Contact() {
         className="formulario-contato max-w-150 mx-auto bg-[rgba(255,255,255, 0.05)] backdrop-blur-[10px] p-8 border border-solid border-(--glass) rounded-2xl"
         id="formulario"
       >
-
         <h2 className="text-2xl font-bold mb-6">Informações de Contato</h2>
 
         <div className="space-y-4">
           {contactItems.map((item) => (
             <div key={item.id} className="flex gap-4">
-              <Link target="_blank" href={item.link} className="flex justify-center items-center w-12 bg-[#251B3D] rounded-full">
-                <div >
-                  {item.icon}
-                </div>
+              <Link
+                target="_blank"
+                href={item.link}
+                className="flex justify-center items-center w-12 h-12 bg-[#251B3D] rounded-full"
+              >
+                <div>{item.icon}</div>
               </Link>
               <div>
                 <p className="text-[#6D4EB3]">{item.title}</p>
-                <Link target="_blank" href={item.link}>{item.value}</Link>
+                <Link target="_blank" href={item.link}>
+                  <p className="text-xs md:text-base">{item.value}</p>
+                </Link>
               </div>
-
             </div>
           ))}
-
         </div>
-
-
-
-
-
-
 
         {/* <div className="grupo-form">
           <input
