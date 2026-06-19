@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 Meu Portfólio Pessoal
 
-## Getting Started
+Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para centralizar e apresentar minhas principais habilidades técnicas, projetos práticos e minha evolução como desenvolvedor de software.
 
-First, run the development server:
+🔗 **Acesse o portfólio rodando em produção:** [gabriel-tomazi.vercel.app](https://gabriel-tomazi.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias e Ferramentas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tenho facilidade com ferramentas digitais e venho aprimorando meu domínio técnico em:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Front-End:** React.js, TypeScript e Nextjs.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Projetos em Destaque
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Aqui estão os principais projetos destacados no meu portfólio que demonstram minhas habilidades em transformar conceitos de design e regras de negócio em código funcional:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **TechStore:** Uma vitrine digital interativa desenvolvida para simular a experiência de um e-commerce de tecnologia. O grande destaque técnica é a criação de um carrossel de produtos altamente responsivo, focado em animações suaves, usabilidade e fidelidade visual.
+* **Stranger Things - The Experience:** Um projeto de interface web totalmente interativo e imersivo inspirado na famosa série da Netflix. Desenvolvido para aprimorar técnicas avançadas de estilização, manipulação de eventos e design temático rico em detalhes visuais (UI/UX).
+* **Weather API:** Uma aplicação web voltada para a consulta de informações climáticas de qualquer cidade do mundo em tempo real. O projeto foca no consumo assíncrono de APIs externas e tratamento dinâmico de dados para entregar uma interface fluida e útil ao usuário.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📬 Contato
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Estou sempre aberto a novas conexões, oportunidades de estágio e colaborações técnicas!
+
+* **LinkedIn:** [linkedin.com/in/gabriel-tomazi](https://www.linkedin.com/in/gabriel-tomazi)
+---
+Desenvolvido com ☕ e código por Gabriel Tomazi.
