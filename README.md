@@ -8,9 +8,7 @@ Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvi
 
 ## 🚀 Tecnologias e Ferramentas
 
-Tenho facilidade com ferramentas digitais e venho aprimorando meu domínio técnico em:
-
-* **Front-End:** React.js, TypeScript e Nextjs.
+* **Front-End:** React, Nextjs, TypeScript e Tailwind.
 
 ---
 
